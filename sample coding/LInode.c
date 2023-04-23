@@ -5,6 +5,7 @@ struct node{
      struct node *link;
 };
 typedef struct node n;
+// METHOD 1 TO ACESS NODES
 int main(){
        n *head=(n *)malloc(sizeof(n));
        head -> data= 45;
