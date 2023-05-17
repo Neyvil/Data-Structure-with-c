@@ -54,6 +54,30 @@ ns *del_end(ns *head){
     }
     return head;
 }
+ns *del_pos(ns *head,int pos){
+    ns *current=head;
+    ns *previous=head;
+    if(head==NULL){
+        printf("List Is Empty");
+    }
+    else if(pos==1){
+        head=current->link;
+        free(current);
+        current=NULL;
+    }
+    else{
+        while(pos!=1){
+            previous=current;
+            current=current->link;
+            pos--;
+        }
+        previous->link=current->link;
+        free(current);
+        current=NULL;
+    }
+    return head;
+
+}
 
 
 
@@ -85,6 +109,14 @@ int main() {
     head=del_first(head);
     display(head);
     printf("\n");
-    
+    head=del_pos(head,4);
+    display(head);
+    printf("\n");
+    head=del_pos(head,2);
+    display(head);
+    printf("\n");
+    head=del_pos(head,3);
+    display(head);
+    printf("\n");
     return 0;
 }
