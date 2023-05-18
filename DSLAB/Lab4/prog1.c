@@ -53,13 +53,12 @@ void display(ns *head) {
 }
 
 int main() {
-    int num=2, i;
+    int num=2, i=1;
     ns *head = (ns *)malloc(sizeof(ns));
     head->data=1;
     head->link=NULL;
     while (num != 0) {
-        printf("Enter the number to be inserted: ");
-        scanf("%d", &i);
+        i++;
         add_last(head, i);
         num--;
     }

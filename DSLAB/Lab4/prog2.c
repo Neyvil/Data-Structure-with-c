@@ -79,8 +79,6 @@ ns *del_pos(ns *head,int pos){
 
 }
 
-
-
 void display(ns *head) {
     ns *ptr;
     ptr = head;
