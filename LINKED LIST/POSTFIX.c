@@ -4,7 +4,7 @@
 #include <math.h>
 #define max 100
 struct eval{
-    char stack[max];
+    int stack[max];
     char postfix[max];
     int top;
 };
@@ -71,6 +71,7 @@ int isEmpty(ev *s){
 
 int main(){
     ev s;
+    s.top=-1;
     printf("Enter postfix expression: ");
     scanf("%s",s.postfix);
     for(int i=0;i<strlen(s.postfix);i++)
