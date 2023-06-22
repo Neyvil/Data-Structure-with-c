@@ -51,18 +51,24 @@ int isEmpty(ev *s){
          if(t>='0'&& t<='9')
            push (s,t-'0');
          else{
-            int a2=pop(s);
             int a1=pop(s);
+            int a2=pop(s);
             switch(t){
                 case '+':
-                     push(s,a1+a2);
+                     push(s,a2+a1);
                      break;
                 case '-':
-                    push(s,a1-a2);
+                    push(s,a2-a1);
                     break;
                 case '*':
-                     push(s,a1*a2);
+                     push(s,a2*a1);
                      break;
+                case '/':
+                    push(s,a2/a1);
+                    break;
+                case '^':
+                    push(s,pow(a2,a1));
+                    break;
             }
          }
     }

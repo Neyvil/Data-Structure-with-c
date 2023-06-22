@@ -28,21 +28,22 @@ void insertAtBeginning(Node** head, int data) {
     *head = newNode;
 }
 
-void insertAtEnd(Node** head, int data) {
+Node* insertAtEnd(Node* head, int data) {
     Node* newNode = createNode(data);
 
-    if (*head == NULL) {
-        *head = newNode;
-        return;
+    if (head == NULL) {
+        head = newNode;
+        return head;
     }
 
-    Node* current = *head;
+    Node* current = head;
     while (current->next != NULL) {
         current = current->next;
     }
 
     current->next = newNode;
     newNode->prev = current;
+    return head;
 }
 
 void deleteNode(Node** head, Node* delNode) {
@@ -91,9 +92,9 @@ int main() {
     printf("List after inserting at the beginning: ");
     displayList(head);
 
-    insertAtEnd(&head, 4);
-    insertAtEnd(&head, 5);
-    insertAtEnd(&head, 6);
+    head=insertAtEnd(head, 4);
+    head=insertAtEnd(head, 5);
+    head=insertAtEnd(head, 6);
 
     printf("List after inserting at the end: ");
     displayList(head);

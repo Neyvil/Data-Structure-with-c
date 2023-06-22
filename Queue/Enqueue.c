@@ -53,6 +53,9 @@ int main(){
         scanf("%d",&d);
         enqueue(&q,d);
     }
+    enqueue(&q,6);
+    enqueue(&q,6);
+
     for(int j=q.f+1;j<=q.r;j++){
         printf("%d ",q.arr[j]);
     }
