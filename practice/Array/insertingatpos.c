@@ -9,11 +9,12 @@ int main(){
         printf("%d ",arr[i]);
     }
     size=size+1;
-    for(int i=size-1;i>0;i--){
-        arr[i]=arr[i-1];
-}
-
-    arr[0]=9;
+    int pos=2;
+    pos--;
+     for (int i = size-1; i>pos; i--) {
+        arr[i] = arr[i-1];
+    }
+    arr[pos]=8;
     printf("\nthe array size :%d",size);
     printf("\n\nthe array :");
     for(int i=0;i<size;i++){
