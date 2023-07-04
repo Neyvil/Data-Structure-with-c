@@ -48,6 +48,9 @@ int main(){
     push(&root,1);
     push(&root,2);
     displayStack(root);
+    int deleteditem=pop(&root);
+    printf("poped item: %d\n",deleteditem);
+    displayStack(root);
 
 return 0;
 }
