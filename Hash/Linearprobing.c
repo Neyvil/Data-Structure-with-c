@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define SIZE 10
+#define SIZE 8
 
 typedef struct {
     int key;
