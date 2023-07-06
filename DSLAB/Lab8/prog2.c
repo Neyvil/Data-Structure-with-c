@@ -41,7 +41,7 @@ void printArray(int arr[], int size) {
 
 // Driver code
 int main() {
-    int arr[] = {9, 5, 1, 40, 32, 200, 18};
+    int arr[] = {3,5,1,2,4};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     printf("Original array: ");
